@@ -1,7 +1,8 @@
 package com.racingcar.domain;
 
 public class Position {
-	private final int FIRST_POSITION = 0;
+	private static final int FIRST_POSITION = 0;
+	private static final int FORWARD_ONE_STEP = 1;
 
 	private int no;
 
@@ -10,7 +11,7 @@ public class Position {
 	}
 
 	public void moveForward() {
-		this.no += 1;
+		this.no += FORWARD_ONE_STEP;
 	}
 
 	public int getNo() {
