@@ -15,7 +15,6 @@ public class RacingCars {
 		}
 	}
 
-
 	private void registerRacingCar(String carName) {
 		cars.add(new Car(carName));
 	}
