@@ -5,7 +5,8 @@ import java.util.List;
 import java.util.Random;
 
 public class RacingCars {
-	private final int RANDOM_MAX_NUMBER = 10;
+	private static final int RANDOM_MAX_NUMBER = 10;
+
 	private final List<Car> cars;
 
 	public RacingCars(String[] carNames) {
@@ -36,7 +37,7 @@ public class RacingCars {
 		int maxPosition = cars.get(0).getPosition();
 		List<Car> winners = new ArrayList<>();
 
-		for (int i = 0; i < cars.size() && cars.get(i).getPosition() == maxPosition; i ++) {
+		for (int i = 0; i < cars.size() && cars.get(i).getPosition() == maxPosition; i++) {
 			winners.add(cars.get(i));
 		}
 		return winners;
