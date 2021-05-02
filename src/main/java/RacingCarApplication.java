@@ -13,7 +13,7 @@ public class RacingCarApplication {
 
 			System.out.println("시도할 회수는 몇회인가요?");
 			int count = racingCarGame.inputCount(sc.nextInt());
-			racingCarGame.start(count);
+			racingCarGame.run(count);
 		}
 	}
 }

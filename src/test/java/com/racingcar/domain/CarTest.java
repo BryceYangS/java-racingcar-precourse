@@ -13,9 +13,9 @@ public class CarTest {
 		Car car = new Car("bryce");
 
 		/* when */
-		int positionNumBeforeMove = car.getPosition().getNo();
+		int positionNumBeforeMove = car.getPosition();
 		car.moveOrStop(4);
-		int positionNumAfterMove = car.getPosition().getNo();
+		int positionNumAfterMove = car.getPosition();
 
 		/* then */
 		assertThat(positionNumBeforeMove + 1).isEqualTo(positionNumAfterMove);
@@ -28,9 +28,9 @@ public class CarTest {
 		Car car = new Car("bryce");
 
 		/* when */
-		int positionNumBeforeMove = car.getPosition().getNo();
+		int positionNumBeforeMove = car.getPosition();
 		car.moveOrStop(3);
-		int positionNumAfterMove = car.getPosition().getNo();
+		int positionNumAfterMove = car.getPosition();
 
 		/* then */
 		assertThat(positionNumBeforeMove).isEqualTo(positionNumAfterMove);
