@@ -2,7 +2,9 @@ package com.racingcar.domain;
 
 public class Car {
 
-	private static final int MOVE_MIN_NUM = 4;
+	private final int MOVE_BEGIN_NUM = 4;
+	private final int MOVE_STOP_MIN_NUM = 0;
+	private final int MOVE_STOP_MAX_NUM = 9;
 
 	private final Name name;
 	private final Position position;
@@ -13,21 +15,29 @@ public class Car {
 	}
 
 	public void moveOrStop(int randomNo) {
-		if (randomNo < 0 || randomNo > 9) {
+		if (randomNo < MOVE_STOP_MIN_NUM || randomNo > MOVE_STOP_MAX_NUM) {
 			throw new IllegalArgumentException("0 이상 9 이하만 입력이 가능합니다");
 		}
 
-		if (randomNo >= MOVE_MIN_NUM) {
+		if (randomNo >= MOVE_BEGIN_NUM) {
 			position.moveForward();
 		}
 	}
 
-	public Name getName() {
-		return name;
+	public String getName() {
+		return name.getName();
 	}
 
-	public Position getPosition() {
-		return position;
+	public int getPosition() {
+		return position.getNo();
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		for (int i=0; i < getPosition(); i++){
+			sb.append("-");
+		}
+		return getName() + " : " + sb.toString();
+	}
 }
