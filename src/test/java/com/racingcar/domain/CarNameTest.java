@@ -10,13 +10,12 @@ public class CarNameTest {
 	@Test
 	@DisplayName("자동차 이름 유효성 검사")
 	void carNameValidation() {
-		Name carName = new Name();
 		assertThatIllegalArgumentException().isThrownBy(() -> {
-			carName.setName("aaaaaa");
+			new Name("aaaaaa");
 		});
 
 		assertThatIllegalArgumentException().isThrownBy(() -> {
-			carName.setName("");
+			new Name("");
 		});
 	}
 }
