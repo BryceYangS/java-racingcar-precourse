@@ -16,7 +16,7 @@ public class Car {
 
 	public void moveOrStop(int randomNo) {
 		if (randomNo < MOVE_STOP_MIN_NUM || randomNo > MOVE_STOP_MAX_NUM) {
-			throw new IllegalArgumentException("0 이상 9 이하만 입력이 가능합니다");
+			throw new IllegalArgumentException(MOVE_STOP_MIN_NUM + " 이상 " + MOVE_STOP_MAX_NUM +" 이하만 입력이 가능합니다");
 		}
 
 		if (randomNo >= MOVE_BEGIN_NUM) {

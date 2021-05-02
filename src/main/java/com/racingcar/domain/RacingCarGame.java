@@ -10,12 +10,12 @@ public class RacingCarGame {
 
 	public void inputCarNames(String inCarNames) {
 		String[] carNames = inCarNames.split(",");
-		if (carNames.length < CAR_MIN_NUMBER) throw new IllegalArgumentException("자동차는 2대 이상 입력해주세요");
+		if (carNames.length < CAR_MIN_NUMBER) throw new IllegalArgumentException("입력이 올바르지 않습니다. 자동차는 " + CAR_MIN_NUMBER + "대 이상 입력해주세요");
 		cars = new RacingCars(carNames);
 	}
 
 	public int inputCount(int inCount) {
-		if (inCount < COUNT_MIN_NUMBER) throw new IllegalArgumentException("횟수는 1회 이상 입력하세요.");
+		if (inCount < COUNT_MIN_NUMBER) throw new IllegalArgumentException("횟수는 " + COUNT_MIN_NUMBER + "회 이상 입력하세요.");
 		return inCount;
 	}
 
